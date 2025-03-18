@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c69ca29f7c8ea094cba4ff72b245f4f5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemyPrefab: {fileID: 2550369928709089736, guid: 850bacae75a676c42bab9654d0e51e99, type: 3}
+  - wallToDestroy: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  firePrefab: {fileID: 6935269912481653857, guid: d4c7d32c8275f134ab15918d7fe5a00b, type: 3}
   healthBarPrefab: {fileID: 8438822164926760442, guid: e796505c671554745ac8a9ca26e051ac, type: 3}
 --- !u!114 &-5738515735132154372
 MonoBehaviour:

@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class ReactiveEnemy : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
+    public GameObject firePrefab;
+    private GameObject fireInstance;
+    private bool isDestroyed = false;
     private int currentHealth;
     private bool isWounded = false;
     private float normalSpeed = 5f;
@@ -69,6 +72,19 @@ public class ReactiveEnemy : MonoBehaviour
             canvasTransform.position = transform.position + Vector3.up * 2f;
             canvasTransform.LookAt(Camera.main.transform);
         }
+        if (isDestroyed && fireInstance == null)
+        {
+            SpawnFire();
+        }
+    }
+
+    void SpawnFire()
+    {
+        if (firePrefab != null)
+        {
+            fireInstance = Instantiate(firePrefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            fireInstance.transform.SetParent(transform); // Вогонь рухається разом із танком
+        }
     }
 
     public bool IsAlive()
@@ -86,7 +102,8 @@ public class ReactiveEnemy : MonoBehaviour
 
         //transform.Rotate(90.0f, 0, 0);
         //transform.Translate(0, 3.0f, 1.5f);
-        yield return new WaitForSeconds(1.5f);
+        SpawnFire();
+        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
 }

@@ -25,8 +25,8 @@ public class fpsInput : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal") * speed;
         float vertical = Input.GetAxis("Vertical") * speed;
 
-        Vector3 forward = _cameraTransform.forward;
-        Vector3 right = _cameraTransform.right;
+        Vector3 forward = CameraSwitcher.activeCamera.transform.forward;
+        Vector3 right = CameraSwitcher.activeCamera.transform.right;
 
         forward.y = 0;
         right.y = 0;

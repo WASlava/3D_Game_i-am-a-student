@@ -5,7 +5,7 @@ using UnityEngine;
 [AddComponentMenu("Control Script/FPS Input")]
 public class fpsInput : MonoBehaviour
 {
-    [SerializeField] private float speed = 6.0F;
+    [SerializeField] private float speed = 4.0F;
     [SerializeField] private float gravity = -9.8F;
 
     private CharacterController _characterController;
@@ -16,7 +16,7 @@ public class fpsInput : MonoBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
-        _cameraTransform = Camera.main.transform;
+        _cameraTransform = CameraSwitcher.activeCamera.transform;
     }
 
     // Update is called once per frame
@@ -33,6 +33,8 @@ public class fpsInput : MonoBehaviour
 
         forward.Normalize();
         right.Normalize();
+
+
 
         Vector3 desiredMoveDirection = (forward * vertical + right * horizontal) * speed;
 

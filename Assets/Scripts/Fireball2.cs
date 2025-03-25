@@ -4,11 +4,12 @@ public class Fireball2 : MonoBehaviour
 {
     [SerializeField] private float speed = 20f;  // Ўвидк≥сть
 
-    [SerializeField] private float damage = 10.0f;
+    [SerializeField] private int damage = 10;
+
 
     void Start()
     {
-      
+
     }
 
     void Update()
@@ -20,12 +21,18 @@ public class Fireball2 : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<ReactiveEnemy>()?.TakeDamage((int)damage);
+            other.GetComponent<ReactiveEnemy>()?.TakeDamage(damage);
+            Destroy(this.gameObject);      
         }
         else if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerCharacter>()?.TakeDamage(damage);
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+        else if (other.CompareTag("Wall"))
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }

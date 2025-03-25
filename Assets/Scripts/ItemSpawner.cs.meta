@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 41f1d503865f10847bfb83bc26f865c6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ammoPrefab: {fileID: 2894109965172476528, guid: 5db455a1487e621489ae796d37fbc1a3, type: 3}
+  - medPrefab: {fileID: 8651880071344644429, guid: 381bf555ffb38ce4f939125d843e0fc8, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

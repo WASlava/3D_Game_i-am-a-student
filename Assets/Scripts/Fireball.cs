@@ -3,7 +3,7 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     [SerializeField] private float speed = 10.0f;
-    [SerializeField] private float damage = 10.0f;
+    [SerializeField] private int damage = 10;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

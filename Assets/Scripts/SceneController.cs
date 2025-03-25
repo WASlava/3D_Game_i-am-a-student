@@ -57,7 +57,7 @@ public class SceneController : MonoBehaviour
         if (respawnCount < maxRespawns)
         {
             _enemies[index] = Instantiate(enemyPrefab);
-            _enemies[index].transform.position = new Vector3(Random.Range(10, 90), 4.5F, Random.Range(105, 190));
+            _enemies[index].transform.position = new Vector3(Random.Range(10, 90), 1.25F, Random.Range(105, 190));
             _enemies[index].transform.Rotate(0, Random.Range(0, 360), 0);
             respawnCount++;
 

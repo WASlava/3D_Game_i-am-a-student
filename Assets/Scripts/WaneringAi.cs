@@ -9,11 +9,12 @@ using UnityEngine;
 
 public class WaneringAi : MonoBehaviour
 {
-    [SerializeField] private float speed = 3.0f;
-    [SerializeField] private float obstacleRange = 10.0f;
+    [SerializeField] private float speed = 4.0f;
+    [SerializeField] private float obstacleRange = 20.0f;
 
     [SerializeField] private GameObject FireballPrefab;
     private GameObject _fireball;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,12 +32,6 @@ public class WaneringAi : MonoBehaviour
         }
 
 
-        //GameObject obj = hit.transfirm.gameObject();
-        //PlayerCharacter player = hit.Object.GetComponent<PlayerCharacter>();
-        //if (obj == null || !obj.IsAlive())
-        //{
-        //    return;
-        //}
 
         transform.Translate(0, 0, speed * Time.deltaTime);
 
@@ -59,10 +54,7 @@ public class WaneringAi : MonoBehaviour
             {
                 if (_fireball == null)
                 {
-                    //_fireball = Instantiate(FireballPrefab);
-                    _fireball = Instantiate(FireballPrefab, transform.position + transform.forward * 1.5f, transform.rotation);
-                    //_fireball.transform.position = transform.TransformPoint(Vector3.forward * 1.5f);
-                    //_fireball.transform.rotation = transform.rotation;
+                    _fireball = Instantiate(FireballPrefab, transform.position + transform.forward * 8f, transform.rotation);
                 }
                 transform.Translate(0, 0, speed * Time.deltaTime);
             }

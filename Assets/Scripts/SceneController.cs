@@ -61,6 +61,12 @@ public class SceneController : MonoBehaviour
             _enemies[index].transform.Rotate(0, Random.Range(0, 360), 0);
             respawnCount++;
 
+
+            Canvas healthCanvas = _enemies[index].GetComponentInChildren<Canvas>();
+            if (healthCanvas != null)
+            {
+                healthCanvas.worldCamera = Camera.main;
+            }
             yield return new WaitForSeconds(respawnDelay);
         }
     }

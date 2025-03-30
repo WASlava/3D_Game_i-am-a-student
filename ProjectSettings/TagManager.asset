@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Camera_III
   - Camera_I
+  - HealthEnemy
   layers:
   - Default
   - TransparentFX

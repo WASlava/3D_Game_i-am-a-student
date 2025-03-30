@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    [SerializeField] private PlayerCharacter player;
-
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -15,19 +13,22 @@ public class PickupItem : MonoBehaviour
                 return;
             }
 
-            if (gameObject.CompareTag("Ammo"))
+            if (CompareTag("Ammo"))
             {
                 player.AddAmmo(10);
                 Debug.Log("Item Ammo picked up!");
             }
-            else if (gameObject.CompareTag("MedBox"))
+            else if (CompareTag("MedBox"))
             {
                 player.Heal(10);
                 Debug.Log("Item Health picked up!");
             }
+
             Destroy(gameObject);
+            return;
         }
-        else if (other.CompareTag("Enemy") && gameObject.CompareTag("MedBox"))
+
+        if (other.CompareTag("Enemy") && CompareTag("MedBox"))
         {
             ReactiveEnemy enemy = other.GetComponent<ReactiveEnemy>();
             if (enemy == null)
@@ -36,11 +37,10 @@ public class PickupItem : MonoBehaviour
                 return;
             }
 
-            enemy.Heal(20);
-            Destroy(gameObject);
+            enemy.Heal(10);
             Debug.Log("Enemy healed!");
+
+            Destroy(gameObject);
         }
     }
-
 }
-

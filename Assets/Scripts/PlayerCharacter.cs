@@ -13,11 +13,15 @@ public class PlayerCharacter : MonoBehaviour
     //PlayerUI playerUI;
 
     public Slider healthBar;
+    public Image fillImage;
     public TextMeshProUGUI ammoText;
 
     public void UpdateHealth(float health)
     {
-        healthBar.value = health;
+        float healthPercent = health / 100;
+        healthBar.value = healthPercent;
+        //healthBar.value = health;
+        fillImage.color = Color.Lerp(Color.red, Color.green, healthPercent);
     }
 
     public void UpdateAmmo(int ammo, int maxAmmo)

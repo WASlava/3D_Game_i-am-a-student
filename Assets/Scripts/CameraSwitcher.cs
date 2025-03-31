@@ -13,7 +13,7 @@ public class CameraSwitcher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)) // Натискання "C" змінює камеру
+        if (Input.GetKeyDown(KeyCode.C)) 
         {
             SwitchCamera();
         }

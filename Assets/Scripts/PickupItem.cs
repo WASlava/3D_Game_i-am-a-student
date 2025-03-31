@@ -27,8 +27,7 @@ public class PickupItem : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        if (other.CompareTag("Enemy") && CompareTag("MedBox"))
+        else if (other.CompareTag("Enemy") && CompareTag("MedBox"))
         {
             ReactiveEnemy enemy = other.GetComponent<ReactiveEnemy>();
             if (enemy == null)
@@ -41,6 +40,7 @@ public class PickupItem : MonoBehaviour
             Debug.Log("Enemy healed!");
 
             Destroy(gameObject);
+            return;
         }
     }
 }

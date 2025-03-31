@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemSpawnerMed : MonoBehaviour
 {
     public GameObject medPrefab;
-    public float spawnMedInterval = 50f; // Час між спавнами
+    public float spawnMedInterval = 30f;
     public int maxMedItems = 3;
 
     public Vector3 spawnMedAreaMin = new Vector3(10, 2, 105);

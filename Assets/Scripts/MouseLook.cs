@@ -17,7 +17,6 @@ public class MouseLook : MonoBehaviour
 
     private float _rotationX = 0.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
@@ -27,7 +26,6 @@ public class MouseLook : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (axes == RotationAxes.MouseX || axes == RotationAxes.MouseXAndY)

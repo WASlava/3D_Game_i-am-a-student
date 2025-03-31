@@ -8,26 +8,15 @@ public class RayShooter : MonoBehaviour
 {
     [SerializeField] private PlayerCharacter player;
 
-    //private Camera _camera;
-
-    //[SerializeField] private PlayerUI playerUI;
-
     [SerializeField] GUIStyle Style = new GUIStyle();
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //_camera = GetComponent<Camera>();
-
-        //player = FindAnyObjectByType<PlayerCharacter>();
-        //playerUI = FindAnyObjectByType<PlayerUI>();
-
-        Cursor.lockState = CursorLockMode.Locked;
+         Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;            
-      
+     
     }
 
-    // Update is called once per frame
     void Update()
     {
 

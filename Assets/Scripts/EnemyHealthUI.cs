@@ -3,13 +3,12 @@ using UnityEngine.UI;
 
 public class EnemyHealthUI : MonoBehaviour
 {
-    [SerializeField] private GameObject healthEnemyPrefab; // Префаб індикатора
+    [SerializeField] private GameObject healthEnemyPrefab;
     private Slider healthSlider;
     private Image fillImage;
     private Transform cameraTransform;
 
     public Color fullHealthColor = Color.green;
-    //public Color zeroHealthColor = Color.red;
 
     private GameObject healthBarInstance;
 
@@ -40,10 +39,7 @@ public class EnemyHealthUI : MonoBehaviour
     {
         if (healthSlider != null)
         {
-            //float healthPercent = (float)currentHealth / maxHealth;
             healthSlider.value = currentHealth;
-            //healthSlider.value = healthPercent * healthSlider.maxValue;
-            //fillImage.color = Color.Lerp(zeroHealthColor, fullHealthColor, healthPercent);
         }
     }
 

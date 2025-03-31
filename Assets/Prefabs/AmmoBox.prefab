@@ -182,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2549636628930253002}
   - component: {fileID: 5656837712622976321}
-  - component: {fileID: 1252813846319886144}
   - component: {fileID: 1594976702724852754}
   m_Layer: 0
   m_Name: AmmoBox
@@ -199,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2894109965172476528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 42.56, y: 1, z: 153.56}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
@@ -208,7 +207,7 @@ Transform:
   - {fileID: 8689417316647754265}
   - {fileID: 413356160782179231}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &5656837712622976321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -230,24 +229,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1252813846319886144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2894109965172476528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f1d503865f10847bfb83bc26f865c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammoPrefab: {fileID: 2894109965172476528}
-  medPrefab: {fileID: 8651880071344644429, guid: 381bf555ffb38ce4f939125d843e0fc8, type: 3}
-  spawnInterval: 30
-  maxItems: 3
-  spawnAreaMin: {x: 10, y: 1, z: 105}
-  spawnAreaMax: {x: 90, y: 1, z: 190}
 --- !u!114 &1594976702724852754
 MonoBehaviour:
   m_ObjectHideFlags: 0

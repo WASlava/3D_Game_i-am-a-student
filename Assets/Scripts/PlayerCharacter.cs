@@ -20,14 +20,11 @@ public class PlayerCharacter : MonoBehaviour
     {
         float healthPercent = health / 100;
         healthBar.value = healthPercent;
-        //healthBar.value = health;
-        fillImage.color = Color.Lerp(Color.red, Color.green, healthPercent);
     }
 
     public void UpdateAmmo(int ammo, int maxAmmo)
     {
         ammoText.text = $"Ammo: {ammo}/{maxAmmo}";
-        //currentAmmo = ammo;
     }
     public void AddAmmo(int amount)
     {

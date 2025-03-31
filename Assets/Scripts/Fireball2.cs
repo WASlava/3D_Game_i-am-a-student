@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Fireball2 : MonoBehaviour
 {
-    [SerializeField] private float speed = 20f;  // Ўвидк≥сть
+    [SerializeField] private float speed = 20f;
 
     [SerializeField] private int damage = 10;
 

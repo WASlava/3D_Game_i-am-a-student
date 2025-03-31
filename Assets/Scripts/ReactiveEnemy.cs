@@ -15,7 +15,7 @@ public class ReactiveEnemy : MonoBehaviour
     private GameObject fireInstance;
     private bool isDestroyed = false;
 
-    private EnemyHealthUI healthUI; // Посилання на UI  
+    private EnemyHealthUI healthUI; 
 
     public void Heal(int amount)
     {
@@ -49,7 +49,7 @@ public class ReactiveEnemy : MonoBehaviour
         currentHealth = maxHealth;
         speed = normalSpeed;
 
-        healthUI = GetComponent<EnemyHealthUI>(); // Отримуємо компонент відображення здоров'я  
+        healthUI = GetComponent<EnemyHealthUI>(); 
         healthUI?.Initialize(maxHealth);
     }
 

@@ -12,14 +12,14 @@ public class fpsInput : MonoBehaviour
     private Transform _cameraTransform;
     private Vector3 _movement;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
         _cameraTransform = CameraSwitcher.activeCamera.transform;
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal") * speed;

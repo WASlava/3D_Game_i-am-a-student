@@ -12,15 +12,8 @@ public class SceneController : MonoBehaviour
 
     private GameObject[] _enemies = new GameObject[maxEnemies];
     private int respawnCount = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
 
-
-    // Update is called once per frame
     void Update()
     {
         for (int i = 0; i < maxEnemies; i++)
@@ -52,7 +45,6 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator RespawnEnemy(int index)
     {
-        //yield return new WaitForSeconds(respawnDelay); 
 
         if (respawnCount < maxRespawns)
         {

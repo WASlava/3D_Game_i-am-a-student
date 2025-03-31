@@ -32,7 +32,6 @@ public class ItemSpawnerAmmo : MonoBehaviour
             Random.Range(spawnAmmoAreaMin.z, spawnAmmoAreaMax.z)
         );
 
-     
         GameObject newItem = Instantiate(ammoPrefab, randomPosition, Quaternion.identity);
         spawnedAmmoItems.Add(newItem);
 
